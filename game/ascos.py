@@ -1,18 +1,3 @@
-class program:
-	"""
-		Base class for programs that run on the ASCOS
-	"""
-
-	def run(self):
-		pass
-
-	def interrupt(self):
-		pass
-
-	def quit(self):
-		pass
-
-
 class ASCOS:
 	"""
 		Autonomous SpaceCraft Operating System
