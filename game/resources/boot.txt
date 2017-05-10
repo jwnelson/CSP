@@ -1,282 +1,63 @@
-[    0.000000] Autonomous SpaceCraft Operating System version 3.7.1.0, copyright 1986, Stellar Research Laboratory
-[    0.000000]============================================================
-[    0.000000] Boot sequence initiated
-[    0.000000] e820: BIOS-provided physical RAM map:
-[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009cfff] usable
-[    0.000000] BIOS-e820: [mem 0x000000000009d000-0x000000000009ffff] reserved
-[    0.000000] BIOS-e820: [mem 0x00000000000e0000-0x00000000000fffff] reserved
-[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000000fffffff] usable
-[    0.000000] BIOS-e820: [mem 0x0000000010000000-0x000000001000afff] reserved
-[    0.000000] BIOS-e820: [mem 0x000000001000b000-0x00000000af0bdfff] usable
-[    0.000000] BIOS-e820: [mem 0x00000000af0be000-0x00000000bcbfefff] reserved
-[    0.000000] BIOS-e820: [mem 0x00000000bcbff000-0x00000000bcd7efff] ACPI NVS
-[    0.000000] BIOS-e820: [mem 0x00000000bcd7f000-0x00000000bcdfefff] ACPI data
-[    0.000000] BIOS-e820: [mem 0x00000000bcdff000-0x00000000bfffffff] reserved
-[    0.000000] BIOS-e820: [mem 0x00000000f8000000-0x00000000fbffffff] reserved
-[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
-[    0.000000] BIOS-e820: [mem 0x00000000fed08000-0x00000000fed08fff] reserved
-[    0.000000] BIOS-e820: [mem 0x00000000fed10000-0x00000000fed19fff] reserved
-[    0.000000] BIOS-e820: [mem 0x00000000fed1c000-0x00000000fed1ffff] reserved
-[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
-[    0.000000] BIOS-e820: [mem 0x00000000ffa00000-0x00000000ffffffff] reserved
-[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000033dffffff] usable
-[    0.000000] NX (Execute Disable) protection: active
-[    0.000000] DMI: LENOVO 20BXCTO1WW/20BXCTO1WW, BIOS JBET49WW (1.14 ) 05/21/2015
-[    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
-[    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
-[    0.000000] e820: last_pfn = 0x33e000 max_arch_pfn = 0x400000000
-[    0.000000] MTRR default type: write-back
-[    0.000000] MTRR fixed ranges enabled:
-[    0.000000]   00000-9FFFF write-back
-[    0.000000]   A0000-BFFFF uncachable
-[    0.000000]   C0000-FFFFF write-protect
-[    0.000000] MTRR variable ranges enabled:
-[    0.000000]   0 base 00D0000000 mask 7FF0000000 uncachable
-[    0.000000]   1 base 00BE000000 mask 7FFE000000 uncachable
-[    0.000000]   2 base 00BD000000 mask 7FFF000000 uncachable
-[    0.000000]   3 base 00BCE00000 mask 7FFFE00000 uncachable
-[    0.000000]   4 base 00E0000000 mask 7FE0000000 uncachable
-[    0.000000]   5 base 00C0000000 mask 7FF0000000 uncachable
-[    0.000000]   6 disabled
-[    0.000000]   7 disabled
-[    0.000000]   8 disabled
-[    0.000000]   9 disabled
-[    0.000000] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WC  UC- WT  
-[    0.000000] e820: last_pfn = 0xaf0be max_arch_pfn = 0x400000000
-[    0.000000] found SMP MP-table at [mem 0x000f0100-0x000f010f] mapped at [ffff8800000f0100]
-[    0.000000] Scanning 1 areas for low memory corruption
-[    0.000000] Base memory trampoline at [ffff880000097000] 97000 size 24576
-[    0.000000] Using GB pages for direct mapping
-[    0.000000] BRK [0x02206000, 0x02206fff] PGTABLE
-[    0.000000] BRK [0x02207000, 0x02207fff] PGTABLE
-[    0.000000] BRK [0x02208000, 0x02208fff] PGTABLE
-[    0.000000] BRK [0x02209000, 0x02209fff] PGTABLE
-[    0.000000] BRK [0x0220a000, 0x0220afff] PGTABLE
-[    0.000000] BRK [0x0220b000, 0x0220bfff] PGTABLE
-[    0.000000] RAMDISK: [mem 0x33cdc000-0x35e65fff]
-[    0.000000] ACPI: Local APIC address 0xfee00000
-[    0.000000] No NUMA configuration found
-[    0.000000] Faking a node at [mem 0x0000000000000000-0x000000033dffffff]
-[    0.000000] NODE_DATA(0) allocated [mem 0x33dffa000-0x33dffefff]
-[    0.000000] Zone ranges:
-[    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
-[    0.000000]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
-[    0.000000]   Normal   [mem 0x0000000100000000-0x000000033dffffff]
-[    0.000000]   Device   empty
-[    0.000000] Movable zone start for each node
-[    0.000000] Early memory node ranges
-[    0.000000]   node   0: [mem 0x0000000000001000-0x000000000009cfff]
-[    0.000000]   node   0: [mem 0x0000000000100000-0x000000000fffffff]
-[    0.000000]   node   0: [mem 0x000000001000b000-0x00000000af0bdfff]
-[    0.000000]   node   0: [mem 0x0000000100000000-0x000000033dffffff]
-[    0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x000000033dffffff]
-[    0.000000] On node 0 totalpages: 3067983
-[    0.000000]   DMA zone: 64 pages used for memmap
-[    0.000000]   DMA zone: 21 pages reserved
-[    0.000000]   DMA zone: 3996 pages, LIFO batch:0
-[    0.000000]   DMA32 zone: 11139 pages used for memmap
-[    0.000000]   DMA32 zone: 712883 pages, LIFO batch:31
-[    0.000000]   Normal zone: 36736 pages used for memmap
-[    0.000000]   Normal zone: 2351104 pages, LIFO batch:31
-[    0.000000] Reserving Intel graphics stolen memory at 0xbe000000-0xbfffffff
-[    0.000000] ACPI: PM-Timer IO Port: 0x1808
-[    0.000000] ACPI: Local APIC address 0xfee00000
-[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x00] high edge lint[0x1])
-[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
-[    0.000000] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-39
-[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
-[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
-[    0.000000] ACPI: IRQ0 used by override.
-[    0.000000] ACPI: IRQ9 used by override.
-[    0.000000] Using ACPI (MADT) for SMP configuration information
-[    0.000000] ACPI: HPET id: 0x8086a301 base: 0xfed00000
-[    0.000000] smpboot: Allowing 8 CPUs, 4 hotplug CPUs
-[    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
-[    0.000000] PM: Registered nosave memory: [mem 0x0009d000-0x0009ffff]
-[    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000dffff]
-[    0.000000] PM: Registered nosave memory: [mem 0x000e0000-0x000fffff]
-[    0.000000] PM: Registered nosave memory: [mem 0x10000000-0x1000afff]
-[    0.000000] PM: Registered nosave memory: [mem 0xaf0be000-0xbcbfefff]
-[    0.000000] PM: Registered nosave memory: [mem 0xbcbff000-0xbcd7efff]
-[    0.000000] PM: Registered nosave memory: [mem 0xbcd7f000-0xbcdfefff]
-[    0.000000] PM: Registered nosave memory: [mem 0xbcdff000-0xbfffffff]
-[    0.000000] PM: Registered nosave memory: [mem 0xc0000000-0xf7ffffff]
-[    0.000000] PM: Registered nosave memory: [mem 0xf8000000-0xfbffffff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfc000000-0xfebfffff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfec01000-0xfed07fff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfed08000-0xfed08fff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfed09000-0xfed0ffff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfed10000-0xfed19fff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfed1a000-0xfed1bfff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfed1c000-0xfed1ffff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfed20000-0xfedfffff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
-[    0.000000] PM: Registered nosave memory: [mem 0xfee01000-0xff9fffff]
-[    0.000000] PM: Registered nosave memory: [mem 0xffa00000-0xffffffff]
-[    0.000000] e820: [mem 0xc0000000-0xf7ffffff] available for PCI devices
-[    0.000000] Booting paravirtualized kernel on bare hardware
-[    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
-[    0.000000] setup_percpu: NR_CPUS:256 nr_cpumask_bits:256 nr_cpu_ids:8 nr_node_ids:1
-[    0.000000] PERCPU: Embedded 33 pages/cpu @ffff88033dc00000 s98008 r8192 d28968 u262144
-[    0.000000] pcpu-alloc: s98008 r8192 d28968 u262144 alloc=1*2097152
-[    0.000000] pcpu-alloc: [0] 0 1 2 3 4 5 6 7 
-[    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 3020023
-[    0.000000] Policy zone: Normal
-[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
-[    0.000000] Calgary: detecting Calgary via BIOS EBDA area
-[    0.000000] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
-[    0.000000] Memory: 11959128K/12271932K available (8205K kernel code, 1294K rwdata, 3968K rodata, 1488K init, 1292K bss, 312804K reserved, 0K cma-reserved)
-[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
-[    0.000000] Hierarchical RCU implementation.
-[    0.000000]  Build-time adjustment of leaf fanout to 64.
-[    0.000000]  RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=8.
-[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=8
-[    0.000000] NR_IRQS:16640 nr_irqs:760 16
-[    0.000000] vt handoff: transparent VT on vt#7
-[    0.000000] Console: colour dummy device 80x25
-[    0.000000] console [tty0] enabled
-[    0.000000] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 133484882848 ns
-[    0.000000] hpet clockevent registered
-[    0.000000] tsc: Fast TSC calibration using PIT
-[    0.000000] tsc: Detected 2194.967 MHz processor
-[    0.000031] Calibrating delay loop (skipped), value calculated using timer frequency.. 4389.93 BogoMIPS (lpj=8779868)
-[    0.000033] pid_max: default: 32768 minimum: 301
-[    0.000039] ACPI: Core revision 20150930
-[    0.020371] ACPI: 12 ACPI AML tables successfully acquired and loaded
-[    0.020393] Security Framework initialized
-[    0.020394] Yama: becoming mindful.
-[    0.020409] AppArmor: AppArmor initialized
-[    0.021460] Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes)
-[    0.024809] Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes)
-[    0.026235] Mount-cache hash table entries: 32768 (order: 6, 262144 bytes)
-[    0.026253] Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes)
-[    0.026487] Initializing cgroup subsys io
-[    0.026491] Initializing cgroup subsys memory
-[    0.026496] Initializing cgroup subsys devices
-[    0.026499] Initializing cgroup subsys freezer
-[    0.026501] Initializing cgroup subsys net_cls
-[    0.026502] Initializing cgroup subsys perf_event
-[    0.026504] Initializing cgroup subsys net_prio
-[    0.026507] Initializing cgroup subsys hugetlb
-[    0.026509] Initializing cgroup subsys pids
-0.026532] CPU: Physical Processor ID: 0
-[    0.026532] CPU: Processor Core ID: 0
-[    0.026536] ENERGY_PERF_BIAS: Set to 'normal', was 'performance'
-[    0.026537] ENERGY_PERF_BIAS: View and update with x86_energy_perf_policy(8)
-[    0.027609] mce: CPU supports 7 MCE banks
-[    0.027622] CPU0: Thermal monitoring enabled (TM1)
-[    0.027630] process: using mwait in idle threads
-[    0.027633] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
-[    0.027634] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
-[    0.028006] Freeing SMP alternatives memory: 32K (ffffffff820b9000 - ffffffff820c1000)
-[    0.030751] ftrace: allocating 32084 entries in 126 pages
-[    0.045449] smpboot: Max logical packages: 4
-[    0.045452] smpboot: APIC(0) Converting physical 0 to logical package 0
-[    0.045462] DMAR: Host address width 39
-[    0.045464] DMAR: DRHD base: 0x000000fed90000 flags: 0x0
-[    0.045470] DMAR: dmar0: reg_base_addr fed90000 ver 1:0 cap 1c0000c40660462 ecap 7e1ff0505e
-[    0.045472] DMAR: DRHD base: 0x000000fed91000 flags: 0x1
-[    0.045475] DMAR: dmar1: reg_base_addr fed91000 ver 1:0 cap d2008c20660462 ecap f010da
-[    0.045477] DMAR: RMRR base: 0x000000bafde000 end: 0x000000baff4fff
-[    0.045478] DMAR: RMRR base: 0x000000bd800000 end: 0x000000bfffffff
-[    0.045480] DMAR-IR: IOAPIC id 2 under DRHD base  0xfed91000 IOMMU 1
-[    0.045481] DMAR-IR: HPET id 0 under DRHD base 0xfed91000
-[    0.045482] DMAR-IR: x2apic is disabled because BIOS sets x2apic opt out bit.
-[    0.045483] DMAR-IR: Use 'intremap=no_x2apic_optout' to override the BIOS setting.
-[    0.045929] DMAR-IR: Enabled IRQ remapping in xapic mode
-[    0.045931] x2apic: IRQ remapping doesn't support X2APIC mode
-[    0.046539] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
-[    0.086227] TSC deadline timer enabled
-[    0.086230] smpboot: CPU0: Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz (family: 0x6, model: 0x3d, stepping: 0x4)
-[    0.086247] Performance Events: PEBS fmt2+, 16-deep LBR, Broadwell events, full-width counters, Intel PMU driver.
-[    0.086268] ... version:                3
-[    0.086269] ... bit width:              48
-[    0.086269] ... generic registers:      4
-[    0.086270] ... value mask:             0000ffffffffffff
-[    0.086271] ... max period:             0000ffffffffffff
-[    0.086272] ... fixed-purpose events:   3
-[    0.086273] ... event mask:             000000070000000f
-[    0.087179] x86: Booting SMP configuration:
-[    0.087181] .... node  #0, CPUs:      #1
-[    0.090871] NMI watchdog: enabled on all CPUs, permanently consumes one hw-PMU counter.
-[    0.090936]  #2 #3
-[    0.098084] x86: Booted up 1 node, 4 CPUs
-[    0.098086] smpboot: Total of 4 processors activated (17559.73 BogoMIPS)
-[    0.102083] devtmpfs: initialized
-[    0.105084] evm: security.selinux
-[    0.105085] evm: security.SMACK64
-[    0.105086] evm: security.SMACK64EXEC
-[    0.105087] evm: security.SMACK64TRANSMUTE
-[    0.105088] evm: security.SMACK64MMAP
-[    0.105089] evm: security.ima
-[    0.105090] evm: security.capability
-[    0.105148] PM: Registering ACPI NVS region [mem 0xbcbff000-0xbcd7efff] (1572864 bytes)
-[    0.105248] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
-[    0.105341] pinctrl core: initialized pinctrl subsystem
-[    0.105447] RTC time:  1:52:35, date: 11/23/16
-[    0.105564] NET: Registered protocol family 16
-[    0.113897] cpuidle: using governor ladder
-[    0.125888] cpuidle: using governor menu
-[    0.125899] Error parsing PCC subspaces from PCCT
-[    0.125986] ACPI FADT declares the system doesn't support PCIe ASPM, so disable it
-[    0.125987] ACPI: bus type PCI registered
-[    0.125989] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
-[    0.126173] PCI: MMCONFIG for domain 0000 [bus 00-3f] at [mem 0xf8000000-0xfbffffff] (base 0xf8000000)
-[    0.126175] PCI: MMCONFIG at [mem 0xf8000000-0xfbffffff] reserved in E820
-[    0.126180] PCI: Using configuration type 1 for base access
-[    0.134244] ACPI: Added _OSI(Module Device)
-[    0.134246] ACPI: Added _OSI(Processor Device)
-[    0.134247] ACPI: Added _OSI(3.0 _SCP Extensions)
-[    0.134248] ACPI: Added _OSI(Processor Aggregator Device)
-[    0.136231] ACPI : EC: EC description table is found, configuring boot EC
-[    0.136242] ACPI : EC: EC started
-[    0.141316] [Firmware Bug]: ACPI: BIOS _OSI(Linux) query ignored
-[    0.144056] ACPI: Dynamic OEM Table Load:
-[    0.144066] ACPI: SSDT 0xFFFF88032F7A3000 000436 (v01 PmRef  Cpu0Cst  00003001 INTL 20120711)
-[    0.144781] ACPI: Dynamic OEM Table Load:
-[    0.144789] ACPI: SSDT 0xFFFF88032F7A3800 0005AA (v01 PmRef  ApIst    00003000 INTL 20120711)
-[    0.145545] ACPI: Dynamic OEM Table Load:
-[    0.145551] ACPI: SSDT 0xFFFF88032F117400 000119 (v02 PmRef  ApCst    00003000 INTL 20120711)
-[    0.146671] ACPI: Interpreter enabled
-[    0.146697] ACPI: (supports S0 S3 S4 S5)
-[    0.146698] ACPI: Using IOAPIC for interrupt routing
-[    0.146722] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
-[    0.149115] ACPI: Power Resource [PUBS] (on)
-[    0.149706] acpi PNP0C0A:01: ACPI dock station (docks/bays count: 1)
-[    0.150014] ACPI: Power Resource [NVP3] (on)
-[    0.150041] ACPI: Power Resource [NVP2] (on)
-[    0.153324] ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 6 7 9 10 *11)
-[    0.153393] ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 6 7 *9 10 11)
-[    0.153459] ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 6 7 9 *10 11)
-[    0.153524] ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 5 *6 7 9 10 11)
-[    0.153589] ACPI: PCI Interrupt Link [LNKE] (IRQs 3 4 5 6 7 9 10 *11)
-[    0.153640] ACPI: PCI Interrupt Link [LNKF] (IRQs 3 4 5 6 7 9 10 11) *0, disabled.
-[    0.153705] ACPI: PCI Interrupt Link [LNKG] (IRQs 3 4 5 6 7 9 *10 11)
-[    0.153769] ACPI: PCI Interrupt Link [LNKH] (IRQs 3 4 5 6 *7 9 10 11)
-[    0.850913] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
-[    0.852667] serio: i8042 KBD port at 0x60,0x64 irq 1
-[    0.852671] serio: i8042 AUX port at 0x60,0x64 irq 12
-[    0.852820] mousedev: PS/2 mouse device common for all mice
-[    0.853032] rtc_cmos 00:02: RTC can wake from S4
-[    0.853189] rtc_cmos 00:02: rtc core: registered rtc_cmos as rtc0
-[    0.853215] rtc_cmos 00:02: alarms up to one month, y3k, 114 bytes nvram, hpet irqs
-[    0.853221] i2c /dev entries driver
-[    0.853270] device-mapper: uevent: version 1.0.3
-[    0.853358] device-mapper: ioctl: 4.34.0-ioctl (2015-10-28) initialised: dm-devel@redhat.com
-[    0.853376] Intel P-state driver initializing.
-[    0.853522] ledtrig-cpu: registered to indicate activity on CPUs
-[    0.854220] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input3
-[    0.854539] NET: Registered protocol family 10
-[    0.854946] NET: Registered protocol family 17
-[    0.854972] Key type dns_resolver registered
-[    0.855418] microcode: CPU0 sig=0x306d4, pf=0x40, revision=0x1d
-[    0.855441] microcode: CPU1 sig=0x306d4, pf=0x40, revision=0x1d
-[    0.855461] microcode: CPU2 sig=0x306d4, pf=0x40, revision=0x1d
-[    0.855476] microcode: CPU3 sig=0x306d4, pf=0x40, revision=0x1d
-[    0.855591] microcode: Microcode Update Driver: v2.01 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
-[    0.855953] registered taskstats version 1
-[    0.856012] Loading compiled-in X.509 certificates
-[    0.858426] Loaded X.509 cert 'Build time autogenerated kernel key: a1f61691bd0a3817b529766167ce
-f00cb5321db5'
-[   0.858562] Kernel loaded. Boot procedure complete.
+boot device          : ei
+processor number     : 0
+host name            : sevana
+file name            : /usr/vw/bsp/config/mv167/SrlTos
+inet on ethernet (e) : 147.11.41.154:ffffff00
+host inet (h)        : 147.11.41.4
+user (u)             : mani
+flags (f)            : 0x2
+target name (tn)     : t41-154
+
+Attaching network interface ei0... done.   (1)
+Attaching network interface lo0... done.
+Loading... 341300 + 102656 + 25850        (2)
+Starting at 0x1000...                     (3)
+
+Attaching network interface ei0... done.   (4)
+Attaching network interface lo0... done.
+NFS not included.
+Loading symbol table from sevana:/usr/vw/bsp/config/mv167/SrlTos.sym ...done
+(5)
+
+]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+]]]]]]]]]]]    ]]]]]]]]]]]]]]]]]]]]     ]]]]]]]]]]]]]]]
+]]]]]]]]           ]]]]]]]]]]]]]]]]    ]]]]]]]]]]]]]]]]
+]]]]]]    ]]]]]]    ]]]]]]]]]]]]]]]]]      ]]]] 
+]]]]]]    ]]]]]]]]]]]]]]]]]]]]]]]          ]]]]
+]]]]]]      ]]]]]]]]]]]]]]]]]]]]]          ]]]]
+]]]]]]]]      ]]]]]]]]]]]]]]]]]]]  ]]      ]]]]
+]]]]]]]]]]      ]]]]]]]    ]  ]]] ]]]      ]]]]   ]]]]]]]    ]]]]
+]]]]]]]]]]]]      ]]]]]       ]] ]]]]      ]]]]  ]]]]   ]]  ]]]]
+]]]]]]]]]]]]]]     ]]]]    ]]]]  ]]]]      ]]]]  ]]]]   ]]   ]]]]
+]]]]]]]]]]]]]]]]    ]]]    ]]]   ]]]]      ]]]]  ]]]]   ]]    ]]]]
+]]]]]]    ]]]]]     ]]]    ]]    ]]]]      ]]]]  ]]]]   ]]    ]]]]
+]]]]]]]           ]]]]]    ]     ]]]]      ]]]]  ]]]]   ]]     ]]]]
+]]]]]]]]]]]    ]]]]]]]]          ]]]]      ]]]]   ]]]]]]]   ]]]]]
+]]]]]]]]]]]]]]]]]]]]]]]]]]                       
+]]]]]]]]]]]]]]]]]]]]]]]]]
+]]]]]]]]]]]]]]]]]]]]]]]]       
+]]]]]]]]]]]]]]]]]]]]]]]
+]]]]]]]]]]]]]]]]]]]]]]
+
+]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+     ]]]]]]]]]]]  ]]]]     ]]]]]]]]]]       ]]              ]]]]         (R)
+]     ]]]]]]]]]  ]]]]]]     ]]]]]]]]       ]]               ]]]]
+]]     ]]]]]]]  ]]]]]]]]     ]]]]]] ]     ]]                ]]]]
+]]]     ]]]]] ]    ]]]  ]     ]]]] ]]]   ]]]]]]]]]  ]]]] ]] ]]]]  ]]   ]]]]]
+]]]]     ]]]  ]]    ]  ]]]     ]] ]]]]] ]]]]]]   ]] ]]]]]]] ]]]] ]]   ]]]]
+]]]]]     ]  ]]]]     ]]]]]      ]]]]]]]] ]]]]   ]] ]]]]    ]]]]]]]    ]]]]
+]]]]]]      ]]]]]     ]]]]]]    ]  ]]]]]  ]]]]   ]] ]]]]    ]]]]]]]]    ]]]]
+]]]]]]      ]]]]]     ]]]]]]    ]  ]]]]]  ]]]]   ]] ]]]]    ]]]]]]]]    ]]]]
+]]]]]]]    ]]]]]  ]    ]]]]]]  ]    ]]]   ]]]]   ]] ]]]]    ]]]] ]]]]    ]]]]
+]]]]]]]]  ]]]]]  ]]]    ]]]]]]]      ]     ]]]]]]]  ]]]]    ]]]]  ]]]] ]]]]]
+]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+]]]]]]]]]]]]]]]]]]]]]]]]]]]]]       
+]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+]]]]]]]]]]]]]]]]]]]]]]]]]]]       VxWorks version 5.1
+]]]]]]]]]]]]]]]]]]]]]]]]]]       KERNEL: WIND version 2.4
+]]]]]]]]]]]]]]]]]]]]]]]]]       Copyright Wind River Systems, Inc., 1984
+
+                                    CPU: Motorola MVME167.  Processor #0.
+                                    Memory Size: 0x1000000.  BSP version 1.0.
