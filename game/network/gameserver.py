@@ -18,9 +18,17 @@ class TelnetHandler(telnet.NVTBaseClass):
     pass
 
 class RequestHandler(socketserver.StreamRequestHandler):
+    """
+        A threading socketserver request handler.
 
+        Each new connection request to GameServer is spun off as its own RequestHandler thread 
+        for the duration of the game session.
+
+        When the player closes the connection, the RequestHandler ends the session (gracefully)
+        and ends the thread.
+    """
     def handle(self):
-        logging.info("{} connected.".format(self.client_address))
+        logging.info("{}:{} connected.".format(self.client_address[0], self.client_address[1]))
         # Create a new Session instance to handle this client's game
         gamesession = session.Session(self.client_address)
         #telnethandler = TelnetHandler()
@@ -30,8 +38,8 @@ class RequestHandler(socketserver.StreamRequestHandler):
 
         # Handle user login
         login = False
-        self.request.sendall(assets.welcome_message)
-        self.request.sendall("Authenticate with your username and password.\n Enter 'NEW' as username to register as a new user.\n")
+        #self.request.send(assets.welcome_message)  # Banner message is larger than 1024 bytes, need to implement send_large or make it smaller
+        self.request.send("Authenticate with your username and password.\n Enter 'NEW' as username to register as a new user.\n")
         self.request.sendall("Username: ")
         state = "username"
 
@@ -90,11 +98,22 @@ class RequestHandler(socketserver.StreamRequestHandler):
         # Close the server at the end of the session
         self.server_close()
 
+    def send_large(self, data, chunksize):
+        """
+            Splits a large data payload into 1024 byte chunks
+        """
+        nchunks = math.floor(len(bytes(data))%chunksize)
+
+        for n in range(nchunks):
+            self.request.sendall(bytes(data[(chunksize * n + 0):1024]))
+
+
 class GameServer:
     """
         Class that handles all network connections to the active socket.
         When a client makes a new connection, the listener spins off a
-        new thread to handle that client.
+        new RequestHandler thread to handle that client for the duration of
+        their session.
     """
     def __init__(self, host, client_port, control_port = 111, debug = False):
         self.host = host
@@ -120,15 +139,37 @@ class GameServer:
     def run_server(self):
         logging.info("Starting GameServer.")
         self.server_thread.start()
-        logging.info("Server running in thread: {}".format(self.server_thread.current_thread()))
+        logging.debug("Gameserver running in thread: %s", self.server_thread.name)
 
     def _signal_handler(self, signal, frame):
         logging.info("Shutting down GameServer.")
         self.server.shutdown()
 
+def test_client(ip, port, message):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.connect((ip, port))
+    logger = logging.getLogger()
+    logger.debug("%s checking in", message)
+
+    connected = True
+    while connected:
+        try:
+            sock.sendall(message)
+            response = sock.recv(1024)
+            print("Received: {}".format(response))
+        finally:
+            sock.close()
+
+
 if __name__ == "__main__":
     HOST = "localhost"
-    PORT = 23
+    PORT = 555
 
-    server = GameServer(HOST, PORT, debug = True)
-    server.run_server()
+    gameserver = GameServer(HOST, PORT, debug = True)
+    gameserver.run_server()
+
+    ip, port = gameserver.server.server_address
+
+    test_client(ip, port, "Client A")
+    #test_client(ip, port, "Cleint B")
+    #test_client(ip, port, "Client C")
